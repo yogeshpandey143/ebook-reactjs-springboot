@@ -39,31 +39,31 @@ export default function PopularBook() {
             All
           </button>
           <button
-            className={activeButton === "all" ? "active" : ""}
+            className={activeButton === "Business" ? "active" : ""}
             onClick={() => handleFilterChange("Business")}
           >
             Business
           </button>
           <button
-            className={activeButton === "all" ? "active" : ""}
+            className={activeButton === "Adventure" ? "active" : ""}
             onClick={() => handleFilterChange("Adventure")}
           >
             Adventure
           </button>
           <button
-            className={activeButton === "all" ? "active" : ""}
+            className={activeButton === "Technology" ? "active" : ""}
             onClick={() => handleFilterChange("Technology")}
           >
             Technology
           </button>
           <button
-            className={activeButton === "all" ? "active" : ""}
+            className={activeButton === "Fantacy" ? "active" : ""}
             onClick={() => handleFilterChange("Fantacy")}
           >
             Fantacy
           </button>
           <button
-            className={activeButton === "all" ? "active" : ""}
+            className={activeButton === "Romantic" ? "active" : ""}
             onClick={() => handleFilterChange("Romantic")}
           >
             Romantic
