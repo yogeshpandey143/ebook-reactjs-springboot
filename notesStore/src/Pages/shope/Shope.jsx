@@ -1,6 +1,4 @@
-
-import "./PopularBook.css";
-
+import "./Shope.css"
 // import title props............
 import TitleTypeOne from "../../UI/TitleTypeOne/TitleTypeOne";
 
@@ -9,26 +7,44 @@ import TitleTypeOne from "../../UI/TitleTypeOne/TitleTypeOne";
 import { galleryData } from "../../Data/Data";
 
 import { useState } from "react";
-
-export default function PopularBook() {
-  const [activeButton, setActiveButton] = useState("all");
+const Shope = () => {
+ const [activeButton, setActiveButton] = useState("all");
+  const [sortBy, setSortBy] = useState("default");
 
   const handleFilterChange = (category) => {
-   
     setActiveButton(category);
   };
+
+  const handleSortByChange = (sortOption) => {
+    setSortBy(sortOption);
+  };
+
+   
   const filterItems =
     activeButton === "all"
       ? galleryData
       : galleryData.filter((item) => item.category === activeButton);
 
+
+       const sortedItems = [...filterItems].sort((a, b) => {
+    if (sortBy === "priceLowToHigh") {
+      return parseFloat(a.price.replace("$", "")) - parseFloat(b.price.replace("$", ""));
+    } else if (sortBy === "priceHighToLow") {
+      return parseFloat(b.price.replace("$", "")) - parseFloat(a.price.replace("$", ""));
+    } else if (sortBy === "newest") {
+      return b.id - a.id; // Assuming higher id means newer
+    } else {
+      return 0; // No sorting (default)
+    }
+  });
+
   return (
     <section>
-      <div className="container popularbooks-container">
+      <div className="container shope-container">
         <TitleTypeOne
-          TitleTop={"some quality items"}
-          Title={"Popular Books"}
-          className={"popularbooks-title"}
+          TitleTop={"Our Quality Items"}
+          Title={"Shop Books"}
+          className={"books-title"}
         />
 
         <div className="filter-buttons">
@@ -70,8 +86,22 @@ export default function PopularBook() {
           </button>
         </div>
 
+        <div className="showcase">
+        <div className="side-bar">   
+                <div className="sortBy">
+                    <h4>Sort By</h4>
+                     <select  className="select" onChange={(e) => handleSortByChange(e.target.value)}>
+                        <option className="select-option" value="default">Default</option>
+                        <option className="select-option" value="priceLowToHigh">Price: Low to High</option>
+                        <option className="select-option" value="priceHighToLow">Price: High to Low</option>
+                        <option  className="select-option" value="newest">Newest</option>
+                        </select>  
+              </div>
+              </div>
+        
+
         <div className="gallery">
-          {filterItems.slice(0,8).map(({ name, writer, price, image }, index) => {
+          {sortedItems.slice(0,8).map(({ name, writer, price, image }, index) => {
             return (
               <div className="gallery-item" key={index}>
                 <div className="popularbook-image">
@@ -91,7 +121,10 @@ export default function PopularBook() {
             );
           })}
         </div>
+        </div>
       </div>
     </section>
   );
 }
+
+export default Shope

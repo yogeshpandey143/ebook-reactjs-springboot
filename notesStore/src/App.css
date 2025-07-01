@@ -13,19 +13,18 @@
 }
 
 :root{
-  --color-primary:#d3521f;
-  --color-black:#111111;
   --color-black-Ex:#222222;
-  --color-dark:#7A7A7A;
   --color-dark-Ex:#E5E3DA;
-  --color-light:#efeee8;
-
   --color-bg-1:#F3F2EC;
   --color-bg-2:#EDEBE4;
-
-
+  --color-dark: #333;
+  --color-dark-Ex: #555;
+  --color-primary: #ff6f61;
+  --color-black: #000;
+  --transition: all 0.3s ease;
+  --color-white: #fff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --font-family-prata:'Prata',serif;
-
   --transition:.4s ease;
 }
 

@@ -1,9 +1,11 @@
-import React from "react";
+
 import "./TitleTypeOne.css";
+import PropTypes from "prop-types";
 
 // import victor image
 
 import victor from "../../assets/victor.png";
+
 
 function TitleTypeOne({ ClassName, Title, TitleTop }) {
   return (
@@ -20,5 +22,11 @@ function TitleTypeOne({ ClassName, Title, TitleTop }) {
     </div>
   );
 }
+TitleTypeOne.propTypes = {
+  ClassName: PropTypes.string,
+  Title: PropTypes.string,
+  TitleTop: PropTypes.string,
+};
 
 export default TitleTypeOne;
+

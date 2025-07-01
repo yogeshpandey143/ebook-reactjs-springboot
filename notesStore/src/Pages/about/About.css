@@ -1,0 +1,33 @@
+.about-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.highlight {
+  font-weight: 600;
+  color: tomato; /* Blue color for highlighting */
+}
+.about-brands-container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}

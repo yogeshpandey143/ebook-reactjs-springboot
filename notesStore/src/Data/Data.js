@@ -10,10 +10,7 @@ export const navLinks =[
         name:'About',
         path:'/about'
     },
-    {
-        name:'Pages',
-        path:'/pages'
-    },
+
     {
         name:'Shope',
         path:'/shope'
@@ -40,21 +37,24 @@ export const navLinks =[
   // navRight links Data..............................
   export const navRight = {
     managements: [
-      {
+       {
           id: 1,
-          icon: FiUser,  
+          icon: VscSearch,      
           link: '*'
       },
+    
       {
           id: 2,
           icon: BsBag,      
           link: '*'
-      },
-      {
+      }, 
+       {
           id: 3,
-          icon: VscSearch,      
+          icon: FiUser,  
           link: '*'
       },
+
+     
     ]
       
   };
@@ -215,75 +215,129 @@ export const navLinks =[
   import popularbook7 from '../assets/PopularBooksImage/book7.png'
   import popularbook8 from '../assets/PopularBooksImage/book8.png'
   
-  
-  export const galleryData = [
-      {
-        id: 1,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Business',
-        image: popularbook1,
-      },
-      {
-        id: 2,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Technology',
-        image: popularbook2,
-      },
-      {
-        id: 3,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Adventure',
-        image: popularbook3,
-      },
-      {
-        id: 4,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Romantic',
-        image: popularbook4,
-      },
-      {
-        id: 5,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Fictional',
-        image: popularbook5,
-      },
-      {
-        id: 6,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Business',
-        image: popularbook6,
-      },
-      {
-        id: 7,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Technology',
-        image: popularbook7,
-      },
-      {
-        id: 8,
-        name: 'Great travel at desert',
-        writer:'Sanchit Howdy',
-        price: '$ 38.00 ' ,
-        category: 'Romantic',
-        image: popularbook8,
-      },
-      
-    ];
-    
+ export const galleryData = [
+  {
+    id: 1,
+    name: 'Great Travel at Desert',
+    writer: 'Sanchit Howdy',
+    price: '$38.00',
+    category: 'Business',
+    image: popularbook1,
+  },
+  {
+    id: 2,
+    name: 'The Secrets of Ocean Life',
+    writer: 'Aarav Verma',
+    price: '$42.50',
+    category: 'Technology',
+    image: popularbook2,
+  },
+  {
+    id: 3,
+    name: 'Adventure in the Amazon Forest',
+    writer: 'Neha Sharma',
+    price: '$30.00',
+    category: 'Adventure',
+    image: popularbook3,
+  },
+  {
+    id: 4,
+    name: 'Romance Under the Moonlight',
+    writer: 'Karan Mehta',
+    price: '$25.00',
+    category: 'Romantic',
+    image: popularbook4,
+  },
+  {
+    id: 5,
+    name: 'The Fictional Realms',
+    writer: 'Pooja Iyer',
+    price: '$40.00',
+    category: 'Fictional',
+    image: popularbook5,
+  },
+  {
+    id: 6,
+    name: 'Corporate Climb: Business Secrets',
+    writer: 'Rohan Malhotra',
+    price: '$45.00',
+    category: 'Business',
+    image: popularbook6,
+  },
+  {
+    id: 7,
+    name: 'AI: The Future is Here',
+    writer: 'Simran Kaur',
+    price: '$50.00',
+    category: 'Technology',
+    image: popularbook7,
+  },
+  {
+    id: 8,
+    name: 'A Love Story in Paris',
+    writer: 'Kabir Joshi',
+    price: '$28.00',
+    category: 'Romantic',
+    image: popularbook8,
+  },
+  {
+    id: 9,
+    name: 'The Mountain Survival Guide',
+    writer: 'Arjun Desai',
+    price: '$35.00',
+    category: 'Adventure',
+    image: popularbook1,
+  },
+  {
+    id: 10,
+    name: 'Startups: From Zero to Hero',
+    writer: 'Meera Kapoor',
+    price: '$37.00',
+    category: 'Business',
+    image: popularbook2,
+  },
+  {
+    id: 11,
+    name: 'The Digital Age of Invention',
+    writer: 'Yash Patel',
+    price: '$41.00',
+    category: 'Technology',
+    image: popularbook3,
+  },
+  {
+    id: 12,
+    name: 'The Silent Letters',
+    writer: 'Isha Choudhary',
+    price: '$29.00',
+    category: 'Fictional',
+    image: popularbook4,
+  },
+  {
+    id: 13,
+    name: 'Jungle Trails and Hidden Paths',
+    writer: 'Ankit Rao',
+    price: '$33.00',
+    category: 'Adventure',
+    image: popularbook5,
+  },
+  {
+    id: 14,
+    name: 'Love Beyond Borders',
+    writer: 'Priya Sharma',
+    price: '$26.00',
+    category: 'Romantic',
+    image: popularbook6,
+  },
+  {
+    id: 15,
+    name: 'The Future of Artificial Intelligence',
+    writer: 'Vikram Sethi',
+    price: '$48.00',
+    category: 'Technology',
+    image: popularbook7,
+  },
+];
+
    
       
   
@@ -310,41 +364,174 @@ export const navLinks =[
   
   
    
-   export const lettestArticleData = [
-    {
-      id: 1,
-      title: 'Reading books always makes the moments happy',
-      image: ArticleImage1,
-      titLink: "#",
-      date: '2 aug, 2021',
-      inspiration: 'Inspiration', 
-      fbLink: "*",
-      instLink: "*",
-      twitaLink: "*",
-    },
-    {
-      id: 2,
-      image: ArticleImage2,
-      title: 'Reading books always makes the moments happy',
-      titleLink: "*",
-      date: '2 aug, 2021',
-      inspiration: 'Inspiration', 
-      fbLink: "*",
-      instLink: "*",
-      twitaLink: "*",
-    },
-    {
-      id: 3,
-      image: ArticleImage3,
-      title: 'Reading books always makes the moments happy',
-      titleLink: "*",
-      date: '2 aug, 2021',
-      inspiration: 'Inspiration', 
-      fbLink: "*",
-      instLink: "*",
-      twitaLink: "*",
-    },
-   ];
+export const lettestArticleData = [
+  {
+    id: 1,
+    title: 'The Joy of Morning Reading: A Fresh Start',
+    image: ArticleImage1,
+    titLink: "#",
+    date: '1 Jan, 2023',
+    inspiration: 'Start your day with inspiration',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 2,
+    image: ArticleImage2,
+    title: 'Why Books Are the Best Escape from Reality',
+    titLink: "#",
+    date: '14 Feb, 2023',
+    inspiration: 'Escape into a world of imagination',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 3,
+    image: ArticleImage3,
+    title: 'Unlocking Creativity Through Daily Reading',
+    titLink: "#",
+    date: '10 Mar, 2023',
+    inspiration: 'Fuel your creativity with stories',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 4,
+    image: ArticleImage2,
+    title: 'The Power of Non-Fiction to Shape Minds',
+    titLink: "#",
+    date: '22 Apr, 2023',
+    inspiration: 'Knowledge is the key to growth',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 5,
+    image: ArticleImage3,
+    title: 'Five Reasons to Read Historical Novels',
+    titLink: "#",
+    date: '5 May, 2023',
+    inspiration: 'History brings lessons to life',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 6,
+    image: ArticleImage2,
+    title: 'Building Daily Reading Habits That Stick',
+    titLink: "#",
+    date: '18 Jun, 2023',
+    inspiration: 'Consistency builds wisdom',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 7,
+    image: ArticleImage3,
+    title: 'How Reading Fiction Improves Empathy',
+    titLink: "#",
+    date: '30 Jul, 2023',
+    inspiration: 'Walk in someone else’s shoes',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+   {
+    id: 8,
+    image: ArticleImage1,
+    title: 'Exploring the Science Behind Reading Benefits',
+    titLink: "#",
+    date: '12 Aug, 2023',
+    inspiration: 'Science proves the power of books',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 9,
+    image: ArticleImage2,
+    title: 'The Magic of Fantasy: Why We Love Imaginary Worlds',
+    titLink: "#",
+    date: '25 Aug, 2023',
+    inspiration: 'Let your imagination run free',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 10,
+    image: ArticleImage3,
+    title: 'How Biographies Teach Life Lessons',
+    titLink: "#",
+    date: '3 Sep, 2023',
+    inspiration: 'Learn from the lives of great people',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 11,
+    image: ArticleImage1,
+    title: 'Developing Critical Thinking Through Reading',
+    titLink: "#",
+    date: '15 Sep, 2023',
+    inspiration: 'Books sharpen your thinking',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 12,
+    image: ArticleImage2,
+    title: 'Why Poetry Still Matters in the Modern World',
+    titLink: "#",
+    date: '28 Sep, 2023',
+    inspiration: 'Feel the rhythm of words',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 13,
+    image: ArticleImage3,
+    title: 'The Silent Power of Reading in Solitude',
+    titLink: "#",
+    date: '5 Oct, 2023',
+    inspiration: 'Find peace in quiet reading moments',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 14,
+    image: ArticleImage1,
+    title: 'Books That Can Transform Your Mindset',
+    titLink: "#",
+    date: '18 Oct, 2023',
+    inspiration: 'Change your life one page at a time',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+  {
+    id: 15,
+    image: ArticleImage2,
+    title: 'The Rise of Audiobooks: Reading on the Go',
+    titLink: "#",
+    date: '30 Oct, 2023',
+    inspiration: 'Listen, learn, and grow anywhere',
+    fbLink: "*",
+    instLink: "*",
+    twitaLink: "*",
+  },
+];
+
   
    
   

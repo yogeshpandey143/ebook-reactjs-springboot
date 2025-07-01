@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./LatestArticle.css";
 import TitleTypeOne from "../../UI/TitleTypeOne/TitleTypeOne";
 import { lettestArticleData } from "../../Data/Data";
@@ -16,7 +14,7 @@ function LatestArticle() {
         <TitleTypeOne Title={"Latest Article"} TitleTop={"Read our articles"} />
 
         <div className="latest-article-content">
-          {lettestArticleData.map(
+          {lettestArticleData.slice(0, 4).map(
             (
               {
                 titLink,
@@ -63,7 +61,7 @@ function LatestArticle() {
           )}
         </div>
 
-        <Link to={"*"} className="btn btn-border">
+        <Link to={"/articles"} className="btn btn-border">
           read all articles
           <BsArrowRight />
         </Link>

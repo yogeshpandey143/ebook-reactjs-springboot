@@ -1,4 +1,3 @@
-import React from "react";
 
 // import Nav.css................
 
@@ -67,6 +66,7 @@ export default function Nav() {
               <li key={index}>
                 <NavLink
                   to={path}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   {name}
@@ -97,7 +97,7 @@ export default function Nav() {
               className="menu-button btn"
               onClick={() => setIsNavLinkShowing(!isNavLinksShowing)}
             >
-              {!isNavLinksShowing ? <VscMenu /> : <TfiClose />}
+              {!isNavLinksShowing ? <VscMenu /> : <TfiClose/>}
             </button>
           </div>
         </div>

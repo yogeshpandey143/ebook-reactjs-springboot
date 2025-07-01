@@ -1,4 +1,3 @@
-import React from "react";
 
 import "./BestSellingBook.css";
 
@@ -32,6 +31,7 @@ export default function BestSellingBook() {
       {sellingBooksData.map(
         ({ img, infoTitle, infoTitleTop, desc, price, shopbtnLink }) => {
           return (
+            // eslint-disable-next-line react/jsx-key
             <div className="container bestselling-container">
               <div className="selling-book-left">
                 <img src={img} alt="" />
