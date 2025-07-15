@@ -51,6 +51,50 @@ nav {
   display: none;
 }
 
+.management-icons {
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+.logout {
+  color: red;
+}
+
+
 /* Media Screen for 600px*/
 
 @media (max-width: 1024px) {
@@ -97,6 +141,8 @@ nav {
     overflow: hidden;
   }
 
+  
+
   .menu-button {
     display: inline-block;
     color: var(--color-dark);
@@ -135,6 +181,8 @@ nav {
   .navLinksHide {
     display: none;
   }
+
+  
 
   .menu-bar {
     display: inline-block;

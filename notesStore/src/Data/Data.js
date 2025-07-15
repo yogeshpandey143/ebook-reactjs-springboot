@@ -35,29 +35,14 @@ export const navLinks =[
   
   
   // navRight links Data..............................
-  export const navRight = {
-    managements: [
-       {
-          id: 1,
-          icon: VscSearch,      
-          link: '*'
-      },
-    
-      {
-          id: 2,
-          icon: BsBag,      
-          link: '*'
-      }, 
-       {
-          id: 3,
-          icon: FiUser,  
-          link: '*'
-      },
 
-     
-    ]
-      
-  };
+  export const navRight = {
+  managements: [
+    { id: "1", type: "search", icon: VscSearch, link: "/search" },
+    { id: "2", type: "cart", icon: BsBag, link: "/cart" },
+    { id: "3", type: "login", icon: FiUser, link: "/login" }
+  ]
+};
   
   
   

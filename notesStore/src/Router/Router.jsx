@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 // import pages.........
 
@@ -12,20 +12,26 @@ import About from "../Pages/about/About";
 import Articles from "../Pages/articles/Articles";
 import Shope from "../Pages/shope/Shope";
 
+import {Toaster} from "react-hot-toast";
 
 
 export default function Router() {
+  
+
+  const isSellerPath = useLocation().pathname.includes("/seller");
   return (
-    <BrowserRouter>
-      <Nav></Nav>
+    <>
+    {isSellerPath ? null :  <Nav></Nav>}  
+
+      <Toaster  position="top-right" reverseOrder={false} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
-         <Route path="/shope" element={<Shope />} />
+        <Route path="/shope" element={<Shope />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
-    </BrowserRouter>
+    </>
   );
 }

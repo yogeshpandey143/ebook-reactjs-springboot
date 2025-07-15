@@ -6,10 +6,13 @@ import TitleTypeOne from "../../UI/TitleTypeOne/TitleTypeOne";
 
 import { galleryData } from "../../Data/Data";
 
-import { useState } from "react";
+import {  useState } from "react";
+import { useAppContext } from "../../context/AppContext";
 const Shope = () => {
  const [activeButton, setActiveButton] = useState("all");
   const [sortBy, setSortBy] = useState("default");
+  const [filteredBooks, setFilteredBooks] = useState([]);
+  const {addToCart, updateCartItems, removeFromCart, cartItem , navigate, books, searchQuery,setSearchQuery } = useAppContext();
 
   const handleFilterChange = (category) => {
     setActiveButton(category);
@@ -22,8 +25,8 @@ const Shope = () => {
    
   const filterItems =
     activeButton === "all"
-      ? galleryData
-      : galleryData.filter((item) => item.category === activeButton);
+      ? books
+      : books.filter((item) => item.category === activeButton);
 
 
        const sortedItems = [...filterItems].sort((a, b) => {
