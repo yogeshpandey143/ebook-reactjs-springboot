@@ -38,7 +38,7 @@ export const navLinks =[
 
   export const navRight = {
   managements: [
-    { id: "1", type: "search", icon: VscSearch, link: "/search" },
+    { id: "1", type: "search", icon: VscSearch, link: "/shope" },
     { id: "2", type: "cart", icon: BsBag, link: "/cart" },
     { id: "3", type: "login", icon: FiUser, link: "/login" }
   ]

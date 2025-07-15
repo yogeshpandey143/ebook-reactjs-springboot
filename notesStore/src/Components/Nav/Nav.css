@@ -36,6 +36,21 @@ nav {
   color: tomato;
 }
 
+.nav-item {
+  cursor: pointer;
+  color: #333;
+}
+
+.search-input {
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px;
+  outline: none;
+}
+
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -205,4 +220,12 @@ nav {
   .nav-links {
     width: 18rem;
   }
+
+  .search-input {
+  
+  padding: 4px 8px;
+
+  width: 100px;
+ 
+}
 }

@@ -30,16 +30,15 @@ export default function Nav() {
   // useState  for navLink show and hide................
 
   const [isNavLinksShowing, setIsNavLinkShowing] = useState(false);
-  const {navigate, user,showUserLogin , setUser, setShowUserLogin} = useAppContext();
-  
+  const { navigate, user, showUserLogin, setUser, setShowUserLogin ,searchQuery,setSearchQuery } =
+    useAppContext();
 
+  const [showSearchInput, setShowSearchInput] = useState(false);
 
-  const logout =  async() => {
+  const logout = async () => {
     setUser(null);
-    navigate('/');
-   
-  }
-
+    navigate("/");
+  };
 
   // Window Scroll Nav-Links Effect................
   if (innerWidth < 1024) {
@@ -91,23 +90,35 @@ export default function Nav() {
 
         {/*...........nav-right.......*/}
 
+
+
+      
         <div className="nav-right">
+                 {showSearchInput && (
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search..."
+              className="search-input"
+            />
+          )}
           {navRight.managements.map((item, index) => {
+              
             const handleClick = (e) => {
               if (item.type === "search") {
-                console.log("Search clicked");
-              } else if (item.type === "cart") {
+                setShowSearchInput((prev) => !prev);
+    } else if (item.type === "cart") {
                 console.log("Cart clicked");
               } else if (item.type === "login" && !user) {
                 setShowUserLogin(true);
-               navigate("/login"); 
+                navigate("/login");
               }
             };
-           if(item.type === "cart" && !user) return null;
-          
-           // If user is logged in and item is login, show dropdown
+            if (item.type === "cart" && !user) return null;
 
-            
+            // If user is logged in and item is login, show dropdown
+
             if (item.type === "login" && user) {
               return (
                 <div key={index} className="dropdown-container">
@@ -128,7 +139,6 @@ export default function Nav() {
                 </div>
               );
             }
-
             // Default for other items
             return (
               <Link
@@ -141,6 +151,7 @@ export default function Nav() {
               </Link>
             );
           })}
+
 
           <div className="menu-bar">
             <button
