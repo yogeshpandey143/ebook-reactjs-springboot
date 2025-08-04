@@ -13,6 +13,7 @@ import Articles from "../Pages/articles/Articles";
 import Shope from "../Pages/shope/Shope";
 
 import {Toaster} from "react-hot-toast";
+import Contact from "../Pages/contact/Contact";
 
 
 export default function Router() {
@@ -29,6 +30,7 @@ export default function Router() {
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/shope" element={<Shope />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
